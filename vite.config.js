@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 import path from 'path'
 import createVitePlugins from './vite/plugins'
-
+ 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd())
@@ -25,7 +25,7 @@ export default defineConfig(({ mode, command }) => {
     },
     // vite 相关配置
     server: {
-      port: 80,
+      port: 3000,
       host: true,
       open: true,
       proxy: {
