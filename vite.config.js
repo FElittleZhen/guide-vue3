@@ -34,9 +34,23 @@ export default defineConfig(({ mode, command }) => {
           target: 'http://localhost:8080',
           changeOrigin: true,
           rewrite: (p) => p.replace(/^\/dev-api/, '')
+        },
+        '/quite': {
+          target: 'http://localhost:8000',
+          changeOrigin: true,
+          rewrite: (p) => p.replace(/^\/quite/, '')
         }
       }
     },
+    // server: {
+    //   port: 8000,
+    //   host: true,
+    //   open: true,
+    //   proxy: {
+    //     // https://cn.vitejs.dev/config/#server-proxy
+       
+    //   }
+    // },
     //fix:error:stdin>:7356:1: warning: "@charset" must be the first rule in the file
     css: {
       postcss: {

@@ -71,6 +71,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '',
+    component: Layout,
+    children: [
+      {
+        path: '/article',
+        component: () => import('@/views/article'),
+        name: 'article',
+        meta: { title: '文章管理', icon: 'dashboard', affix: true }
+      }
+    ]
+  },
+  {
     path: '/user',
     component: Layout,
     hidden: true,
